@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"net/http"
 )
 
 func main() {
-	res, _ := http.Get("http://www.mcleods.com")
-	page, _ := iountil.ReadAll(res.Body)
+	res, _ := http.Get("http://www.mcleod.com/")
+	page, _ := ioutil.ReadAll(res.Body)
 	res.Body.Close()
-	page.Body.Close()
-	fmt.Println("%s", page)
+	fmt.Printf("%s", page)
 }
